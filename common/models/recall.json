@@ -1,0 +1,56 @@
+{
+  "name": "recall",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "text": {
+      "type": "string",
+      "mysql":
+      {
+        "columnName":"text",
+        "dataType":"TEXT",
+        "nullable":"Y"
+      }
+    },
+    "recallSign": {
+      "type": "number",
+      "required": true,
+      "default": 1,
+      "mysql":
+      {
+        "columnName":"recall_sign",
+        "dataType":"TINYINT",
+        "nullable":"N",
+        "default": 1
+      }
+    },
+    "shebangId": {
+      "type": "number",
+      "required": true,
+      "mysql":
+      {
+        "columnName":"shebang_id",
+        "dataType":"MEDIUMINT",
+        "nullable":"N"
+      }
+    },
+    "visitDate": {
+      "type": "date",
+      "required": true,
+      "mysql":
+      {
+        "columnName":"visit_date",
+        "dataType":"DATE",
+        "nullable":"N",
+        "default": "new Date"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,46 @@
+{
+  "name": "shebang",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "mysql":
+      {
+        "columnName":"name",
+        "dataType":"VARCHAR",
+        "dataLength":120,
+        "nullable":"N"
+      }
+    },
+    "address": {
+      "type": "string",
+      "required": true,
+      "mysql":
+      {
+        "columnName":"address",
+        "dataType":"TEXT",
+        "nullable":"N"
+      }
+    },
+    "rating": {
+      "type": "number",
+      "required": true,
+      "mysql":
+      {
+        "columnName":"rating",
+        "dataType":"INT",
+        "nullable":"N",
+        "default":0
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
